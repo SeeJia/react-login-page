@@ -15,7 +15,7 @@ const Login = () => {
 
     if(username === "zhangsoon" && password === "11223344" ){
         
-    const response = await axios.post('https://testing123.free.mockoapp.net',{
+    const response = await axios.post('https://optimumtesting.free.mockoapp.net/auth/login',{
         username,
         password,
     });
@@ -39,11 +39,12 @@ const Login = () => {
    };
 
    return (
-    <div>
-        <h1>Login Page</h1>
+    <div className='login-container'>
+        <label>Logo</label>
+        <h1 className='login-title'>Login Page</h1>
         <form onSubmit={sendLoginForMock}>
             <div>
-            <label>Username:</label>
+            <p className='text'>Username:</p>
                 <input
                     type="text"
                     id="username"
@@ -53,7 +54,7 @@ const Login = () => {
             </div>
 
             <div>
-            <label>Password:</label>
+            <p className='text'>Password:</p>
                 <input
                     type="password"
                     id="password"
@@ -62,15 +63,15 @@ const Login = () => {
                 />
         </div>
 
-        <button onClick={sendLoginForMock}>Login</button>
+        <button className='login-btn' onClick={sendLoginForMock}>Login</button>
 
-        {error && <p>{error}</p>}
+        {error && <p className='error'>{error}</p>}
      
         </form>
         
         {mockData && error === '' && (
             <div>
-                <p>{JSON.stringify(mockData)}</p>
+                <p className='token'>{JSON.stringify(mockData)}</p>
             </div>
         )}
 
