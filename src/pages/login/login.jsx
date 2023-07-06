@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './login.css';
 
-const Login = () => {
+const Login = ( {setLogin} ) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState();
-    const [mockData, setMockData] = useState(null);
+   // const [mockData, setMockData] = useState(null);
     const [error, setError] = useState('');
     
     const sendLoginForMock = async (e) => {
@@ -20,19 +20,24 @@ const Login = () => {
         password,
     });
 
-    //console.log(response.data);
-    setMockData(response.data);
+    console.log(response.data);
+    // setMockData(response.data);
 
+    const loginData = response.data;
+    setLogin(loginData);
+    
+    setUsername('');
+    setPassword('');
     setError('');
     }
 
     else {
-        setMockData(null);
+        //setMockData(null);
         setError('Your username or password is incorrect');
     }
 
     } catch (error) {
-        setMockData(null); 
+        //setMockData(null); 
         setError('Your username or password is incorrect');
     }
    
@@ -69,11 +74,11 @@ const Login = () => {
      
         </form>
         
-        {mockData && error === '' && (
+        {/* {mockData && error === '' && (
             <div>
                 <p className='token'>{JSON.stringify(mockData)}</p>
             </div>
-        )}
+        )} */}
 
     </div>
   )
