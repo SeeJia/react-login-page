@@ -44,7 +44,7 @@ const Login = () => {
         <h1 className='login-title'>Login Page</h1>
         <form onSubmit={sendLoginForMock}>
             <div>
-            <p className='text'>Username:</p>
+            <p className='text-name'>Username:</p>
                 <input
                     type="text"
                     id="username"
@@ -54,7 +54,7 @@ const Login = () => {
             </div>
 
             <div>
-            <p className='text'>Password:</p>
+            <p className='text-password'>Password:</p>
                 <input
                     type="password"
                     id="password"
