@@ -3,8 +3,8 @@ import axios from 'axios';
 import './login.css';
 
 const Login = () => {
-    const [username, setUsername] = useState('zhangsoon');
-    const [password, setPassword] = useState(11223344);
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState();
     const [mockData, setMockData] = useState(null);
     const [error, setError] = useState('');
     
