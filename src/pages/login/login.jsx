@@ -72,7 +72,7 @@ const Login = ( {setLogin} ) => {
 
         {error && <p className='error'>{error}</p>}
 
-        <p style={{textAlign:'center',padding:'10px'}}>username:zhangsoon, password:11223344</p>
+        <p className='hint'>username:zhangsoon, password:11223344</p>
      
         </form>
         

@@ -70,11 +70,21 @@ input{
     /* text-align: center; */
 }
 
+.hint{
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
 
 @media (max-width:550px) {
 
     .login-container{
         max-width: 275px;
+    }
+
+    .error{
+       font-size: 0.8rem;
     }
     
 }
@@ -90,6 +100,10 @@ input{
 
     .token{
         font-size: 0.8rem;
+    }
+
+    .hint{
+        font-size: 0.6rem;
     }
 }
 
