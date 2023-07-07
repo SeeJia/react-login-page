@@ -71,6 +71,8 @@ const Login = ( {setLogin} ) => {
         <button className='login-btn' onClick={sendLoginForMock}>Login</button>
 
         {error && <p className='error'>{error}</p>}
+
+        <p style={{textAlign:'center',padding:'10px'}}>username:zhangsoon, password:11223344</p>
      
         </form>
         
